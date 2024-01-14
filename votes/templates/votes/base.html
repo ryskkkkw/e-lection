@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'votes/style.css' %}">
+    <title> 
+      {% block head_title %}Fill in Head Title{% endblock %}
+    </title>
+  </head>
+  <body>
+    <header class="container header">
+      <div class="title-nav">
+        <h1>
+          {% block title %}Fill in Title{% endblock %}
+        </h1>
+        <nav>
+          {% block nav %}
+          <ul class="nav">
+            <li>
+              <a class="nav-link" href="{% url 'votes:index' %}">Home</a>
+            </li>
+            <li>
+              <a class="nav-link" href="{% url 'votes:select' %}">Vote</a>
+            </li>
+            {% comment %}
+            <li>
+              <a class="nav-link" href="{% url 'votes:results' %}">Results</a>
+            </li>
+            {% endcomment %}
+          </ul>
+          {% endblock %}
+        </nav>
+      </div>
+    </header>
+
+    <main class="container main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="container footer">
+      <ul class="sns-list">
+        <li>
+          <a class="sns-link" href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
+        </li>
+        <li>
+          <a class="sns-link" href="https://www.twitter.com/" target="_blank">TWITTER</a>
+        </li>
+        <li>
+          <a class="sns-link" href="https://www.facebook.com/" target="_blank">FACEBOOK</a>
+        </li>
+      </ul>
+      <span class="copyright">&copy; e-lection</span>
+    </footer>
+  </body>
+</html>

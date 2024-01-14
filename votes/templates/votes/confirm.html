@@ -1,0 +1,19 @@
+{% extends 'votes/base.html' %}
+
+{% block head_title %}
+Vote | e-lection
+{% endblock %}
+
+{% block title %}
+Vote | e-lection
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'votes:vote' party=party age=age gender=gender %}" method="post">
+  {% csrf_token %}
+  <div class="vote-confirm" >
+    <label>投票先：{{ party }}</label>
+    <input type="submit" value="投票">
+  </div>
+</form>
+{% endblock %}

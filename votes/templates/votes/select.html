@@ -1,0 +1,44 @@
+{% extends 'votes/base.html' %}
+
+{% block head_title %}
+Select | e-lection
+{% endblock %}
+
+{% block title %}
+Select | e-lection
+{% endblock %}
+
+{% block content %}
+<form class="vote-form" action="{% url 'votes:confirm' %}" method="get">
+  <h1>政党</h1>
+  <div class="form-content">
+    {% for party in party_list %}
+    <div>
+      <input class="button" type="radio" name="party" id="{{ party }}" value="{{ party }}">
+      <label for="{{ party }}" class="party">{{ party }}</label>
+    </div>
+    {% endfor %}
+  </div>
+  <h1>年齢</h1>
+  <div class="form-content">
+    {% for age in age_list %}
+    <div>
+      <input type="radio" name="age" id="{{ age }}" value="{{ age }}">
+      <label for="{{ age }}" class="age">{{ age }}</label>
+    </div>
+    {% endfor %}
+  </div>
+  <h1>性別</h1>
+  <div class="form-content">
+    {% for gender in gender_list %}
+    <div>
+      <input type="radio" name="gender" id="{{ gender }}" value="{{ gender }}">
+      <label for="{{ gender }}" class="gender">{{ gender }}</label>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="submit">
+    <input type="submit" value="次へ">
+  </div>
+</form>
+{% endblock %}

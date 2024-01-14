@@ -1,0 +1,33 @@
+{% extends 'votes/base.html' %}
+
+{% block head_title %}
+Home | e-lection
+{% endblock %}
+
+{% block title %}
+Home | e-lection
+{% endblock %}
+
+{% block content %}
+<div class="content-list">
+  <a class="content-link" href="{% url 'votes:select' %}">投票</a>
+  <p>投票結果</p>
+  <form class="results" action="{% url 'votes:plot_day' %}">
+    <label>日別：</label>
+    <input class="test" type="date" name="date" id="date">
+    <input type="submit" value="決定">
+  </form>
+  <form class="results" action="{% url 'votes:plot_month' %}">
+    <label>月別：</label>
+    <input type="month" name="month" id="month">
+    <input type="submit" value="決定">
+  </form>
+  <form class="results" action="{% url 'votes:plot_trans' %}">
+    <label>月別推移：</label>
+    <input type="month" name="from_month" id="from_month">
+    <span>〜</span>
+    <input type="month" name="to_month" id="to_month">
+    <input type="submit" value="決定">
+  </form>
+</div>
+{% endblock %}

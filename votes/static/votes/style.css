@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  color: #495057;
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 136rem;
+  padding: 3rem 4rem;
+  margin: 0 auto;
+}
+
+/* header section */
+
+.header {
+  background-color: white;
+  position: sticky;
+  top: 0%;
+}
+
+.title-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.title-nav h1 {
+  font-size: 2.5rem;
+}
+
+.nav {
+  display: flex;
+  font-size: 1.4rem;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #495057;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: #69db7c;
+}
+
+/* footer section */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.sns-list {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.sns-link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* main section */
+
+.main {
+  font-size: 3.5rem;
+}
+
+/* index.html */
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  /* align-items: center; */
+  margin-left: 40rem;
+}
+
+.content-list li {
+  list-style: none;
+}
+
+.content-link {
+  color: #495057;
+  border-bottom: #495057;
+  width: 8rem;
+  /* text-decoration: none; */
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.results input:first-child {
+  height: 5rem;
+  width: 10rem;
+}
+
+.results input:last-child {
+  height: 3rem;
+  width: 5rem;
+}
+
+/* select.html */
+
+.vote-form h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.form-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 3rem;
+  margin-bottom: 5rem;
+  border: 2px solid #999;
+  padding: 2rem;
+}
+
+.form-content input {
+  border: 2px solid #999;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.submit, .vote-confirm {
+  display: flex;
+  justify-content: center;
+}
+
+.submit input {
+  width: 15rem;
+  height: 8rem;
+  font-size: 3rem;
+}
+
+.vote-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+.vote-confirm input {
+  width: 10rem;
+  height: 5rem;
+  font-size: 2.5rem;
+}
